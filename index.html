@@ -2,26 +2,171 @@
 <html>
     <head>
         <title>Agent Login</title>
+
     </head>
     <body>
-        <h4>Razor</h4>
-        <hr width="10%" align="left">
-        <p><a href="mailto:Salex@Razor.uk">Salex@Razor.uk</a> <span> &#8594;</span></p>
-        <button type="button"><img src="earth.png" alt="globe icon" width="25px" height="25px"></button>
-        <button type="button">Sign up</button>
-        <button type="button">Request demo</button>
-        <h3>Agent Login</h3>
-        <p>Hey, Enter your details to get sign in to your account</p>
-        <input type="text" name="email" placeholder="Enter Email / Phone No"><br><br>
-        <input type="password" name="password" placeholder="passcode">
-        <p>Having trouble signing in?</p>
-        <button type="button">Sign in</button>
-        <p>Or Sign in with</p>
-        <button type="button"><img src="google-logo.jpg" alt="Google logo" width="25px" height="25px">Google</button>
-        <button type="button"><img src="apple.jpg" alt="Apple logo" height="25px" width="25px"> Apple ID</button>
-        <button type="button"><img src="black-icon.png" alt="facebook icon" width="25px" height="25px">Facebook</button>
-        <p>Dont have an account?<a href="#">Request now</a></p>
-        <p>Copyright@wework 2022 | Privacy Policy</p>
+        <div class="card-holder">
+            <div class="top-left">
+                <h4>Razor</h4>
+                <hr>
+                <p id="email"><a href="mailto:Salex@Razor.uk">Salex@Razor.uk</a> <span> &#8594;</span></p>
+            </div>
+            <div class="top-right">
+                <button type="button"><img src="earth.png" alt="globe icon" width="25px" height="25px"></button>
+                <button type="button">Sign up</button>
+                <button type="button" id="colored-button">Request demo</button>
+            </div>
 
+            <div class="card">
+                <h2>Agent Login</h2>
+                <form action="">
+                    <p class="p1">Hey, Enter your details to get sign in to your account</p>
+                    <input type="text" name="email" placeholder=" Enter Email / Phone No"><br><br>
+                    <input type="password" name="password" placeholder=" passcode">
+                    <p id="left" class="p2">Having trouble signing in?</p>
+                    <button type="button" class="colored-buttons" style="width:100%">Sign in</button>
+                </form>
+                <p id="hr-line" class="p2">Or Sign in with</p>
+                <button type="button"><img src="google-logo.jpg" alt="Google logo" width="25px" height="25px">Google</button>
+                <button type="button"><img src="apple.jpg" alt="Apple logo" height="25px" width="25px"> Apple ID</button>
+                <button type="button"><img src="black-icon.png" alt="facebook icon" width="25px" height="25px">Facebook</button>
+                <p class="p2">Dont have an account?<a href="#">Request now</a></p>
+            </div>
+        
+            <div class="footer">
+            <p>Copyright@wework 2022 | Privacy Policy</p>
+            </div>
+        </div>
     </body>
 </html>
+
+
+<style>
+    .top-left{
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 0.5;
+        font-size: large;
+    }
+    .top-right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 2%;
+
+    }
+    body{
+        background-color:#f5f2e9;
+        font-family: sans-serif;
+    }
+    input{
+        width:100%;
+        padding: 12px 0px;
+        border: 2px solid ;
+        border-radius:5px;
+        border-color: #f9f9f9;
+    }
+    .top-right button{ 
+        background-color: #f5f2e9;
+        border: none;
+    }
+    button{
+        background-color: white;
+        text-align:center;
+        border-radius:5px;
+        border: none;
+        padding:10px 5px;
+        border: 2px solid ;
+        border-color: #f9f9f9;
+    }
+    img{
+       vertical-align: middle; 
+    }
+    .card-holder{
+        position: absolute;
+        width: 100%;
+        height: 100%;  
+    }
+    .card{
+        background-color:white;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 5%;
+        width:310px;
+        border-radius:30px;
+        padding:40px 30px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        
+    }
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    .colored-buttons{
+        background-color:#fdc886;
+        border:none;
+        font-weight: 800;
+        
+    }
+    #colored-button{
+        background-color:#fdc886;
+        border:none;
+
+    }
+    a{ 
+        color:black;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    /* a:hover{ 
+        font-weight: 600;
+    } */
+    .footer{ 
+        text-align: center;
+        font-size: small;
+    }
+    .p1{ 
+        font-size: large;
+    }
+    .p2{ 
+        font-size: small;
+    }
+    #email{ 
+        font-weight: 100;
+        font-size: small;
+    }
+    #left{ 
+        text-align: left;
+    }
+    #hr-line:before{
+    content:" ";
+    display: block;
+    height: 2px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    background: black;
+    }
+    #hr-line{
+    position: relative;
+    }
+    #hr-line{
+    position: relative;
+    /*  new lines  */
+    max-width: 500px;
+    text-align: center;
+    }
+    #hr-line:after{
+    content:" ";
+    height: 2px;
+    width: 30px;
+    background: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    }
+        
+</style>
